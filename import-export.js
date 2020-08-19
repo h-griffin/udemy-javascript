@@ -1,17 +1,16 @@
 // ### IMPORT AND EXPORTS ### 
 
-// person.js
+// -- person.js
 const person ={
     name:'Max'
 }
 export default person 
 
-// utility.js
+// -- utility.js
 export const clean=()=>{console.log('cleaning')}
 export const baseData = 10;
 
-// app.js
-
+// -- app.js
 // default export
 import person from './person.js'    // pulls whatever export default is
 import prs from './person.js'       // so name does not matter
