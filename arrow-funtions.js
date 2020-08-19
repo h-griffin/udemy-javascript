@@ -7,7 +7,7 @@ function myFunction(){
 myFunction();
 
 const myFunct = () => {
-    console.log('this is an arrow funtion stored in const variable')
+    console.log('this is an arrow function stored in const variable')
 }
 myFunct();
 
@@ -29,7 +29,7 @@ const oneArgArrow = name => {
 }
 oneArgArrow('Griffin')
 
-// funtions that do one thing can be on one line
+// functions that do one thing can be on one line
 const multiply = (number)=>{
     return number*2;
 }
