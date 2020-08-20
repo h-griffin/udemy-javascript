@@ -49,7 +49,7 @@ person.printChangeableHair();   // person changed default human
 
 
 
-// ES7 SYNTAX
+// -- ES7 SYNTAX -- 
 class Human7{
     // no longer needs constructor()
     gender = 'female';
