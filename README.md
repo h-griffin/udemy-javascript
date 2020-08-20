@@ -1,7 +1,7 @@
 # udemy javascript refresh for react
 
 # table of contents
-## module 1
+
 - [variables](variables.js)
 - [arrow functions](arrow-functions.js)
 - [import and exports](import-export.js)
@@ -11,7 +11,7 @@
 - [reference and primitive types](reference-primative-types.js)
 - [array functions (map)](array-functions.js)
 
-## notes
+## notes & resources
 - [array functions](js-array-functions.md)
 - [review summary](summary.md)
 
