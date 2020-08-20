@@ -1,3 +1,5 @@
+## click to jump to file
+
 Next-Gen JavaScript - Summary
 In this module, I provided a brief introduction into some core next-gen JavaScript features, of course focusing on the ones you'll see the most in this course. Here's a quick summary!
 
@@ -14,21 +16,24 @@ Read more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Fun
 Arrow functions are a different way of creating functions in JavaScript. Besides a shorter syntax, they offer advantages when it comes to keeping the scope of the this  keyword (see here).
 
 Arrow function syntax may look strange but it's actually simple.
-```function callMe(name) { 
+```
+function callMe(name) { 
     console.log(name);
 }
 ```
 
 which you could also write as:
 
-```const callMe = function(name) { 
+```
+const callMe = function(name) { 
     console.log(name);
 }
 ```
 
 becomes: 
 
-```const callMe = (name) => { 
+```
+const callMe = (name) => { 
     console.log(name);
 }
 ```
@@ -37,28 +42,33 @@ becomes:
 
 When having **no arguments**, you have to use empty parentheses in the function declaration:
 
-```const callMe = () => { 
+```
+const callMe = () => { 
     console.log('Max!');
 }
 ```
 
 When having **exactly one argument**, you may omit the parentheses:
 
-```const callMe = name => { 
+```
+const callMe = name => { 
     console.log(name);
 }
 ```
 
 When **just returning a value**, you can use the following shortcut:
 
-```const returnMe = name => name
+```
+const returnMe = name => name
 ```
 
 That's equal to:
 
+```
 const returnMe = name => { 
     return name;
 }
+```
 
 ## [Exports & Imports](import-export.js)
 In React projects (and actually in all modern JavaScript projects), you split your code across multiple JavaScript files - so-called modules. You do this, to keep each file/ module focused and manageable.
@@ -94,7 +104,8 @@ Classes are a feature which basically replace constructor functions and prototyp
 
 Like this:
 
-```class Person {
+```
+class Person {
     constructor () {
         this.name = 'Max';
     }
@@ -106,7 +117,8 @@ console.log(person.name); // prints 'Max'
 
 In the above example, not only the class but also a property of that class (=> name ) is defined. The syntax you see there, is the "old" syntax for defining properties. In modern JavaScript projects (as the one used in this course), you can use the following, more convenient way of defining class properties:
 
-```class Person {
+```
+class Person {
     name = 'Max';
 }
  
@@ -116,7 +128,8 @@ console.log(person.name); // prints 'Max'
 
 You can also define methods. Either like this:
 
-```class Person {
+```
+class Person {
     name = 'Max';
     printMyName () {
         console.log(this.name); // this is required to refer to the class!
@@ -129,7 +142,8 @@ person.printMyName();
 
 Or like this:
 
-```class Person {
+```
+class Person {
     name = 'Max';
     printMyName = () => {
         console.log(this.name);
@@ -144,7 +158,8 @@ The second approach has the same advantage as all arrow functions have: The this
 
 You can also use **inheritance** when using classes:
 
-```class Human {
+```
+class Human {
     species = 'human';
 }
  
@@ -169,13 +184,15 @@ Yes, that is the operator - just three dots. It's usage determines whether you'r
 
 The spread operator allows you to pull elements out of an array (=> split the array into a list of its elements) or pull the properties out of an object. Here are two examples:
 
-```const oldArray = [1, 2, 3];
+```
+const oldArray = [1, 2, 3];
 const newArray = [...oldArray, 4, 5]; // This now is [1, 2, 3, 4, 5];
 ```
 
 Here's the spread operator used on an object:
 
-```const oldObject = {
+```
+const oldObject = {
     name: 'Max'
 };
 const newObject = {
@@ -186,7 +203,8 @@ const newObject = {
 
 newObject  would then be
 
-```{
+```
+{
     name: 'Max',
     age: 28
 }
@@ -199,7 +217,8 @@ Destructuring allows you to easily access the values of arrays or objects and as
 
 Here's an example for an array:
 
-```const array = [1, 2, 3];
+```
+const array = [1, 2, 3];
 const [a, b] = array;
 console.log(a); // prints 1
 console.log(b); // prints 2
@@ -208,7 +227,8 @@ console.log(array); // prints [1, 2, 3]
 
 And here for an object:
 
-```const myObj = {
+```
+const myObj = {
     name: 'Max',
     age: 28
 }
@@ -220,7 +240,8 @@ console.log(myObj); // prints {name: 'Max', age: 28}
 
 Destructuring is very useful when working with function arguments. Consider this example:
 
-```const printName = (personObj) => {
+```
+const printName = (personObj) => {
     console.log(personObj.name);
 }
 printName({name: 'Max', age: 28}); // prints 'Max'
@@ -228,7 +249,8 @@ printName({name: 'Max', age: 28}); // prints 'Max'
 
 Here, we only want to print the name in the function but we pass a complete person object to the function. Of course this is no issue but it forces us to call personObj.name inside of our function. We can condense this code with destructuring:
 
-```const printName = ({name}) => {
+```
+const printName = ({name}) => {
     console.log(name);
 }
 printName({name: 'Max', age: 28}); // prints 'Max')
@@ -236,4 +258,3 @@ printName({name: 'Max', age: 28}); // prints 'Max')
 
 We get the same result as above but we save some code. By destructuring, we simply pull out the name  property and store it in a variable/ argument named name  which we then can use in the function body.
 
-Resources for this lecture
